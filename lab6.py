@@ -23,6 +23,7 @@ while True:
 
     # Check if they want to view their cart
     elif item == "view":
+        print("")
         print("-- YOUR CART --")
         if not my_cart:
             print("Your cart is empty.")
@@ -30,6 +31,7 @@ while True:
             for key, value in my_cart.items():
                 print(f"{key}: {value}")
         print("---------------")
+        print("")
 
     # Adding item to cart option
     else:
@@ -44,9 +46,17 @@ while True:
         print(f"> {item_quantity}x {item} added to cart.")
         print("")
 
-        
+print("")
 
+# Final Cart Conclusion
+print("-- FINAL CART --")
+if not my_cart:
+    print("Your cart is empty.")
+else:
+    for key, value in my_cart.items():
+        print(f"{key}: {value}")
+print("---------------")
 
-        
-            
+print("")
 
+print("Thank you for shopping!")
