@@ -15,7 +15,7 @@ print("")
 
 while True:
     # Ask about what action they take
-    item: str = input("What would you like? ").lower()
+    item: str = input("What would you like? ").lower().strip()
 
     # Check if they checkout
     if item == "checkout":
@@ -30,4 +30,23 @@ while True:
             for key, value in my_cart.items():
                 print(f"{key}: {value}")
         print("---------------")
+
+    # Adding item to cart option
+    else:
+        item_quantity: int = int(input("How many? "))
+
+        # Add item + Quantity to cart
+        if item in my_cart:
+            my_cart[item] += item_quantity
+        else:
+            my_cart[item] = item_quantity
+        
+        print(f"> {item_quantity}x {item} added to cart.")
+        print("")
+
+        
+
+
+        
+            
 
